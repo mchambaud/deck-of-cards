@@ -31,7 +31,7 @@ describe('Deck', () => {
 
     expect(deck.cards.length).toEqual(52);
 
-    deck.dealCard();
+    deck.dealOneCard();
 
     expect(deck.cards.length).toEqual(51);
   });
@@ -42,10 +42,10 @@ describe('Deck', () => {
     expect(deck.cards.length).toEqual(52);
 
     for (let idx = 0; idx < 52; idx++) {
-      deck.dealCard();
+      deck.dealOneCard();
     }
 
     expect(deck.cards.length).toEqual(0);
-    expect(deck.dealCard).toThrowError();
+    expect(deck.dealOneCard).toThrowError();
   });
 });

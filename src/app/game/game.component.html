@@ -4,3 +4,6 @@
   deckColor="blue"></app-reverse-card>
 
 <app-card [card]="card"></app-card>
+
+<p *ngIf="message" class="message">{{message}}</p>
+<button *ngIf="gameOver" (click)="playAgain()">Play Again</button>

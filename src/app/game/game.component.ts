@@ -12,17 +12,25 @@ export class GameComponent {
   public deck = new Deck();
   public card: Card;
   public gameOver = false;
+  public message: string;
 
   constructor() {
-    this.deck.shuffle();
   }
 
   dealCard(): void {
     try {
-      this.card = this.deck.dealCard();
+      this.card = this.deck.dealOneCard();
     } catch (error) {
-      console.error(error && error.message);
+      this.message = error && error.message;
       this.gameOver = true;
     }
+  }
+
+  playAgain(): void {
+    this.deck = new Deck();
+
+    this.gameOver = false;
+    delete this.card;
+    delete this.message;
   }
 }

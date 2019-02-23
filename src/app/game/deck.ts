@@ -7,8 +7,12 @@ export class Deck {
 
   constructor() {
     this.cards = this.getDefaultDeck();
+    this.shuffle();
   }
 
+  /**
+   * Shuffles card
+   */
   public shuffle(): void {
     let currentCardPosition = this.cards.length;
     let randomPosition: number;
@@ -24,7 +28,10 @@ export class Deck {
     }
   }
 
-  public dealCard(): Card {
+  /**
+   * Returns the next card in the deck
+   */
+  public dealOneCard(): Card {
     if (this.cards.length === 0) {
       throw new Error('There are no more cards in your deck');
     }
@@ -32,6 +39,9 @@ export class Deck {
     return this.cards.shift();
   }
 
+  /**
+   * Generates a deck of card with 52 playing cards
+   */
   private getDefaultDeck(): Array<Card> {
     const suits = Object.keys(CardSuit);
     const ranks = Object.keys(CardRank).filter((rank) => CardRank[rank] !== CardRank.Back);
