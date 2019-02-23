@@ -19,7 +19,7 @@ before_script:
 
 script:
   - ng test --watch false -cc
-  - ng build --prod "https://mchambaud.github.io/deck-of-cards/"
+  - ng build --prod --base-href="https://mchambaud.github.io/deck-of-cards/"
 
 deploy:
   provider: pages
