@@ -1,7 +1,9 @@
 # Deck of Cards
 [![Build Status](https://travis-ci.org/mchambaud/deck-of-cards.svg?branch=master)](https://travis-ci.org/mchambaud/deck-of-cards)
 
-Super simple Angular project.
+Super simple Angular app built using Angular CLI, TypeScript, Travis...
+
+[Demo](https://mchambaud.github.io/deck-of-cards/)
 
 ## Development server
 
