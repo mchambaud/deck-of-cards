@@ -19,7 +19,6 @@ before_script:
 
 script:
   - ng test --watch false -cc
-  - npm run e2e
   - ng build -bh "https://mchambaud.github.io/deck-of-cards/"
 
 deploy:
