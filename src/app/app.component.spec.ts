@@ -1,11 +1,17 @@
-import { TestBed, async } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { GameComponent } from './game/game.component';
+import { CardComponent } from './card/card.component';
+import { ReverseCardComponent } from './reverse-card/reverse-card.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        GameComponent,
+        CardComponent,
+        ReverseCardComponent
       ],
     }).compileComponents();
   }));
@@ -14,18 +20,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'deck-of-cards'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('deck-of-cards');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to deck-of-cards!');
   });
 });

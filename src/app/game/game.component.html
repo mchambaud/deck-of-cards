@@ -1,0 +1,6 @@
+<app-reverse-card
+  (click)="dealCard();"
+  *ngIf="!gameOver"
+  deckColor="blue"></app-reverse-card>
+
+<app-card [card]="card"></app-card>
