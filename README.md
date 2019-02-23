@@ -1,6 +1,7 @@
-# DeckOfCards
+# Deck of Cards
+[![Build Status](https://travis-ci.org/mchambaud/deck-of-cards.svg?branch=master)](https://travis-ci.org/mchambaud/deck-of-cards)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
+Super simple Angular project.
 
 ## Development server
 
